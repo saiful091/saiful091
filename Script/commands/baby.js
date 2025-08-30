@@ -171,7 +171,7 @@ module.exports.handleEvent = async function ({ api, event }) {
     if (body.startsWith("baby") || body.startsWith("bby") || body.startsWith("bot")) {
       const arr = body.replace(/^\S+\s*/, "");
       if (!arr) {
-        return api.sendMessage("জান তোমার জন্য আমি আছি 😻😘","Bolo baby","Bot না জানু,বল 😌","তোর কোনো কাজ নাই, শুধু bot bot করিস 😉😋🤣","আমাকে না ডেকে মেয়ে হলে বস সাইফুল এর ইনবক্সে চলে যা 🌚😂 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐋𝐢𝐧𝐤 : https://www.facebook.com/profile.php?id=61577052283173","বেশি bot Bot করলে leave নিবো কিন্তু😒😒","Hop beda😾,Boss বল boss😼","হ্যাঁ জানু", "hum",  event.threadID, (error, info) => {
+        return api.sendMessage("জান তোমার জন্য আমি আছি 😻😘", event.threadID, (error, info) => {
           global.client.handleReply.push({
             name: this.config.name,
             type: "reply",
