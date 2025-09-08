@@ -47,7 +47,7 @@ module.exports.run = async ({ api, event }) => {
  form.append("reqtype", "fileupload");
  form.append("fileToUpload", fs.createReadStream(filePath));
 
- const response = await axios.post("https://catbox.moe/user/api.php", form, {
+ const response = await axios.post("https://files.catbox.moe/812qt7.mp3", form, {
  headers: form.getHeaders(),
  });
 
